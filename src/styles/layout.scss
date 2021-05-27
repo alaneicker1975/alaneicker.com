@@ -1,28 +1,51 @@
 .layout {
-  display: flex;
-  justify-content: center;
+  &__header {
+    background: darken($blue-gray-900, 9%);
+    flex: rem(265) 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: rem(0 16);
+    height: rem(70);
+    display: flex;
+    align-items: center;
 
-  @media (min-width: $breakpoint-medium) {
+    & > * + * {
+      border-top: rem(1) solid rgba(255, 255, 255, 0.1);
+      margin-top: rem(24);
+      padding-top: rem(24);
+      text-align: center;
+    }
+  }
+
+  &__main {
+    padding: rem(90 16 16);
+  }
+
+  &__content {
+    & > * {
+      margin-bottom: rem(42);
+    }
+  }
+
+  @media (min-width: $breakpoint-large) {
     height: 100vh;
     margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 
-    &__aside,
+    &__header,
     &__main {
       overflow: auto;
       padding: rem(20);
     }
 
-    &__aside {
-      background: darken($blue-gray-900, 9%);
-      flex: rem(265) 0 0;
-
-      & > * + * {
-        border-top: rem(1) solid rgba(255, 255, 255, 0.1);
-        margin-top: rem(24);
-        padding-top: rem(24);
-        text-align: center;
-      }
+    &__header {
+      flex-direction: column;
+      position: static;
+      height: auto;
     }
 
     &__main {
@@ -32,10 +55,6 @@
     &__content {
       margin: 0 auto;
       max-width: rem(960);
-
-      & > * {
-        margin-bottom: rem(42);
-      }
     }
   }
 }

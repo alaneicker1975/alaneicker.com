@@ -123,7 +123,7 @@
     }
   }
 
-  @media (min-width: $breakpoint-medium) {
+  @media (min-width: $breakpoint-large) {
     width: rem(400);
 
     &__slot {

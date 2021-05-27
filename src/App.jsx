@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import Portal from '@atomikui-core/portal';
+import { useMediaQuery } from 'react-responsive';
 import { Header, Footer, ContactInfo, SocialMedia, Nav } from './components';
 import { Hero, About, Principles, Career, OpenSource } from './sections';
 import { AppProvider, AppContext } from './context';
@@ -22,6 +23,12 @@ const App = () => {
       socialMedia,
     },
   } = useContext(AppContext);
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)',
+  });
+
+  const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
   return (
     <>
@@ -50,13 +57,14 @@ const App = () => {
         </>
       </Portal>
       <div className="layout">
-        <aside className="layout__aside">
+        <aside className="layout__header">
           <Header {...header} />
-          <Nav navItems={nav} />
-          <Footer copyrightText={footer.copyrightText}>
-            <ContactInfo {...contact} />
-            <SocialMedia {...socialMedia} />
-          </Footer>
+          {isDesktop && (
+            <Footer copyrightText={footer.copyrightText}>
+              <ContactInfo {...contact} />
+              <SocialMedia {...socialMedia} />
+            </Footer>
+          )}
         </aside>
         <main className="layout__main">
           <div className="layout__content">
@@ -66,6 +74,7 @@ const App = () => {
             <Career id="career" {...career} />
             <OpenSource id="projects" {...openSource} />
           </div>
+          {isMobile && <div>mobile footer</div>}
         </main>
       </div>
     </>

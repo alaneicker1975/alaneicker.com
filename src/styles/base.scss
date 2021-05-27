@@ -12,7 +12,7 @@ body {
   font-weight: $font-normal;
   line-height: 1.7;
 
-  @media (min-width: $breakpoint-medium) {
+  @media (min-width: $breakpoint-large) {
     font-size: rem(16);
   }
 }

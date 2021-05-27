@@ -36,7 +36,8 @@
     "react": "17.0.1",
     "react-axe": "^3.5.4",
     "react-dom": "^17.0.1",
-    "react-flexbox-grid": "^2.1.2"
+    "react-flexbox-grid": "^2.1.2",
+    "react-responsive": "^8.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.8",

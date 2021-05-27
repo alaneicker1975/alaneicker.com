@@ -1,7 +1,6 @@
 .header {
-  align-items: center;
   display: flex;
-  margin: rem(0 0 24);
+  justify-content: space-between;
 
   a {
     &:hover {
@@ -13,16 +12,42 @@
     align-items: center;
     color: $white;
     display: flex;
-    line-height: 1.2;
     text-decoration: none;
     text-transform: lowercase;
 
     svg {
-      width: rem(48);
+      width: rem(36);
     }
 
     & > * + * {
       margin-left: rem(16);
+    }
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    flex-direction: column;
+
+    &__logo {
+      align-items: center;
+      display: flex;
+      margin: rem(0 0 24);
+
+      svg {
+        width: rem(48);
+      }
+    }
+
+    &__nav {
+      display: block;
+      text-align: center;
+
+      & > * {
+        display: block;
+      }
     }
   }
 }

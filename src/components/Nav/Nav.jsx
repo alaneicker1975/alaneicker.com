@@ -5,7 +5,7 @@ import Link from '@atomikui-core/link';
 import List from '@atomikui-core/list';
 import ListItem from '@atomikui-core/list-item';
 
-const Nav = ({ navItems }) => {
+const Nav = ({ navItems, className }) => {
   const [section, setSection] = useState(null);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Nav = ({ navItems }) => {
 
   return (
     <nav>
-      <List className="nav" loose>
+      <List className={classnames('nav', className)} loose>
         {navItems.map(({ href, rel, target, text, title }) => (
           <ListItem key={title}>
             <Link
@@ -42,6 +42,7 @@ const Nav = ({ navItems }) => {
 };
 
 Nav.propTypes = {
+  className: PropTypes.string,
   navItems: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string,
@@ -53,6 +54,7 @@ Nav.propTypes = {
 };
 
 Nav.defaultProps = {
+  className: '',
   navItems: [],
 };
 

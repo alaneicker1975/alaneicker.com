@@ -6,20 +6,19 @@ header:
   logoText: Alan Eicker
   strapline: Front-End Engineer
   mobileLogoText: AE
-
-nav:
-  - href: /#about
-    text: About
-    title: Go to about section
-  - href: /#principles
-    text: Principles
-    title: Go to core principles section
-  - href: /#career
-    text: Career
-    title: Go to career section
-  - href: /#projects
-    text: Projects
-    title: Go to Projects
+  nav:
+    - href: /#about
+      text: About
+      title: Go to about section
+    - href: /#principles
+      text: Principles
+      title: Go to core principles section
+    - href: /#career
+      text: Career
+      title: Go to career section
+    - href: /#projects
+      text: Projects
+      title: Go to Projects
 
 footer:
   copyrightText: Built with care by Alan Eicker. All rights reserved.
