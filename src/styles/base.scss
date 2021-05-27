@@ -7,10 +7,10 @@ body,
 body {
   background: darken($blue-gray-900, 7%);
   color: $white;
-  font-family: 'Merriweather', 'Times New Roman', Times, serif !important;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif !important;
   font-size: rem(14);
   font-weight: $font-normal;
-  line-height: 1.6;
+  line-height: 1.7;
 
   @media (min-width: $breakpoint-medium) {
     font-size: rem(16);

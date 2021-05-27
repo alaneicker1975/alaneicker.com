@@ -1,11 +1,7 @@
 .header {
   align-items: center;
-  background: darken($blue-gray-900, 7%);
   display: flex;
-  flex-direction: row;
-  height: 100%;
-  justify-content: space-between;
-  padding: rem(0 16);
+  margin: rem(0 0 24);
 
   a {
     &:hover {
@@ -17,19 +13,16 @@
     align-items: center;
     color: $white;
     display: flex;
+    line-height: 1.2;
     text-decoration: none;
     text-transform: lowercase;
 
     svg {
-      width: rem(28);
+      width: rem(48);
     }
 
     & > * + * {
-      margin-left: rem(8);
+      margin-left: rem(16);
     }
-  }
-
-  @media (min-width: $breakpoint-medium) {
-    padding: rem(0 20);
   }
 }

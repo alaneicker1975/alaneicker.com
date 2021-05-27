@@ -1,15 +1,13 @@
 .hero {
-  background: darken($blue-gray-900, 7%);
   display: flex;
   justify-content: center;
-  padding: 0;
 
   &__content {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: rem(50 20);
+    padding: rem(0 0 36);
     text-align: center;
     width: 100%;
 
@@ -66,8 +64,6 @@
 
   @media (min-width: $breakpoint-large) {
     &__content {
-      background: darken($blue-gray-900, 7%);
-
       h1 {
         font-size: rem(85);
       }
@@ -80,14 +76,8 @@
 
   @media (min-width: pixel($site-width)) {
     margin-bottom: rem(56);
-    background: linear-gradient(
-      0deg,
-      rgba(14, 21, 25, 1) 0%,
-      rgba(24, 31, 35, 1) 76%
-    );
 
     &__content {
-      background: darken($blue-gray-900, 4%);
       margin-bottom: rem(-24);
       max-width: rem($site-width);
       position: relative;

@@ -6,7 +6,7 @@ import ListItem from '@atomikui-core/list-item';
 
 const ContactInfo = ({ email, phone, contactHeading }) => (
   <>
-    <h4 className="section-subheading">{contactHeading}</h4>
+    {/* <h4 className="section-subheading">{contactHeading}</h4> */}
     <List>
       <ListItem>
         <Link className="text-weight-medium" href={`mailto:${email}`}>

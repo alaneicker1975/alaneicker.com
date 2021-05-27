@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import Portal from '@atomikui-core/portal';
-import { Header, Footer, ContactInfo, SocialMedia } from './components';
+import { Header, Footer, ContactInfo, SocialMedia, Nav } from './components';
 import { Hero, About, Principles, Career, OpenSource } from './sections';
 import { AppProvider, AppContext } from './context';
 
@@ -14,6 +14,7 @@ const App = () => {
       contact,
       principles,
       header,
+      nav,
       hero,
       footer,
       preface,
@@ -48,7 +49,25 @@ const App = () => {
           <title>{docTitle}</title>
         </>
       </Portal>
-      <div className="layout" />
+      <div className="layout">
+        <aside className="layout__aside">
+          <Header {...header} />
+          <Nav navItems={nav} />
+          <Footer copyrightText={footer.copyrightText}>
+            <ContactInfo {...contact} />
+            <SocialMedia {...socialMedia} />
+          </Footer>
+        </aside>
+        <main className="layout__main">
+          <div className="layout__content">
+            <Hero id="top" {...hero} />
+            <About id="about" {...{ preface, ...about }} />
+            <Principles id="principles" {...principles} />
+            <Career id="career" {...career} />
+            <OpenSource id="projects" {...openSource} />
+          </div>
+        </main>
+      </div>
     </>
   );
 };

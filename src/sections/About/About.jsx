@@ -14,7 +14,7 @@ const About = ({
 }) => (
   <section {...others}>
     <Quotation pullquote>{preface}</Quotation>
-    <Grid className="margin-top-18">
+    <Grid className="margin-top-36">
       <Row>
         <Col lg={6}>
           <h3 className="section-heading">{aboutHeading}</h3>

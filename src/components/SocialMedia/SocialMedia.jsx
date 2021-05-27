@@ -6,7 +6,7 @@ import ListItem from '@atomikui-core/list-item';
 
 const SocialMedia = ({ socialMediaHeading, icons }) => (
   <>
-    <h4 className="section-subheading">{socialMediaHeading}</h4>
+    {/* <h4 className="section-subheading">{socialMediaHeading}</h4> */}
     <List type="horizontal">
       {icons.map(({ title, path, height, width, fill, viewBox, url }) => (
         <ListItem key={title}>

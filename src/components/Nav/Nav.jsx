@@ -20,7 +20,7 @@ const Nav = ({ navItems }) => {
 
   return (
     <nav>
-      <List className="nav" type="horizontal">
+      <List className="nav" loose>
         {navItems.map(({ href, rel, target, text, title }) => (
           <ListItem key={title}>
             <Link
