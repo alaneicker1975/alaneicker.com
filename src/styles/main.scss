@@ -1,0 +1,19 @@
+// Atomikui
+@import '../../node_modules/@atomikui/core/dist/styles/main.min.css';
+@import '../../node_modules/@atomikui/core-sass/abstracts/main.scss';
+
+// Tools - variables, mixins, & functions
+@import './variables';
+
+// Atomikui overrides
+@import './button', './quotation', './progress-bar', './card';
+
+// Global styles
+@import './base', './layout', './section-heading';
+
+// component styles
+@import '../components/Header/Header', '../components/Nav/Nav',
+  '../components/SkilsList/SkillsList', '../components/SlotMachine/SlotMachine';
+
+// Section styles
+@import '../sections//Hero/Hero';

@@ -1,0 +1,11 @@
+.atomikui-quotation {
+  border-top: 0;
+  border-bottom: rem(1) solid $divider-color;
+  padding: rem(0 0 36);
+
+  &--pullquote {
+    & > p {
+      color: $white;
+    }
+  }
+}

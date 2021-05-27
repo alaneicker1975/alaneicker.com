@@ -1,0 +1,33 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: darken($blue-gray-900, 7%);
+  color: $white;
+  font-family: 'Merriweather', 'Times New Roman', Times, serif !important;
+  font-size: rem(14);
+  font-weight: $font-normal;
+  line-height: 1.6;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: rem(16);
+  }
+}
+
+a,
+.atomikui-link {
+  color: $cyan-400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $yellow-100;
+  font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}

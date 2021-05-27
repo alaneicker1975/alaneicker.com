@@ -1,0 +1,148 @@
+.slot-machine {
+  background: $blue-gray-900;
+  box-shadow: rem(0 0 30) rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  padding: rem(24 8);
+  position: relative;
+  width: rem(300);
+
+  &__light {
+    align-items: center;
+    background: $red-500;
+    border-radius: 50%;
+    display: flex;
+    height: rem(60);
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: rem(-30);
+    transform: translateX(-50%);
+    width: rem(60);
+
+    & > svg {
+      & > path {
+        fill: $red-700;
+      }
+    }
+
+    &.is-jackpot {
+      animation: jackpot 0.3s ease-in-out infinite;
+
+      & > svg {
+        & > path {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  &__hd {
+    display: flex;
+  }
+
+  &__slot {
+    flex: 1;
+    font-weight: $font-bold;
+    height: rem(150);
+    padding: rem(8);
+    text-align: center;
+
+    & > * {
+      align-items: center;
+      background: lighten($blue-gray-900, 5%);
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      padding: rem(0 8);
+      flex: 33.333% 0 auto;
+
+      & > svg {
+        font-size: rem(55);
+      }
+
+      & > svg.fa-star {
+        & > path {
+          fill: $sky-blue-200;
+        }
+      }
+
+      & > svg.fa-lemon {
+        & > path {
+          fill: $yellow-700;
+        }
+      }
+
+      & > svg.fa-dollar-sign {
+        & > path {
+          fill: $lime-500;
+        }
+      }
+
+      & > svg.fa-apple-alt {
+        & > path {
+          fill: $red-500;
+        }
+      }
+
+      & > svg.fa-atom {
+        & > path {
+          fill: $deep-purple-300;
+        }
+      }
+
+      & > svg.fa-bacon {
+        & > path {
+          fill: $deep-orange-700;
+        }
+      }
+
+      & > svg.fa-bomb {
+        & > path {
+          fill: $blue-gray-300;
+        }
+      }
+
+      & > svg.fa-bullseye {
+        & > path {
+          fill: $pink-500;
+        }
+      }
+
+      & > svg.fa-carrot {
+        & > path {
+          fill: $orange-500;
+        }
+      }
+
+      & > svg.fa-chess-king {
+        & > path {
+          fill: $yellow-200;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    width: rem(400);
+
+    &__slot {
+      & > * {
+        & > svg {
+          font-size: rem(70);
+        }
+      }
+    }
+  }
+}
+
+@keyframes jackpot {
+  from {
+    background: $red-500;
+    box-shadow: none;
+  }
+  to {
+    background: $red-300;
+    box-shadow: 0 0 20px $red-100;
+  }
+}
