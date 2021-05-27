@@ -73,8 +73,15 @@ const App = () => {
             <Principles id="principles" {...principles} />
             <Career id="career" {...career} />
             <OpenSource id="projects" {...openSource} />
+            {isMobile && (
+              <section className="layout__footer">
+                <Footer copyrightText={footer.copyrightText}>
+                  <ContactInfo {...contact} />
+                  <SocialMedia {...socialMedia} />
+                </Footer>
+              </section>
+            )}
           </div>
-          {isMobile && <div>mobile footer</div>}
         </main>
       </div>
     </>

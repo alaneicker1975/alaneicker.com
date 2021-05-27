@@ -19,6 +19,12 @@
     }
   }
 
+  &__footer {
+    border-top: rem(1) solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding-top: rem(24);
+  }
+
   &__main {
     padding: rem(90 16 16);
   }
