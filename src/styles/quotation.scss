@@ -1,7 +1,7 @@
 .atomikui-quotation {
-  border-bottom: 0;
+  border-bottom: rem(1) solid $divider-color;
   border-top: rem(1) solid $divider-color;
-  padding: rem(36 0 0);
+  padding: rem(36 0);
 
   &--pullquote {
     & > p {

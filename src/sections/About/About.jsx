@@ -13,8 +13,7 @@ const About = ({
   ...others
 }) => (
   <section {...others}>
-    <Quotation pullquote>{preface}</Quotation>
-    <Grid className="margin-top-36">
+    <Grid className="margin-bottom-36">
       <Row>
         <Col lg={6}>
           <h3 className="section-heading">{aboutHeading}</h3>
@@ -31,6 +30,7 @@ const About = ({
         </Col>
       </Row>
     </Grid>
+    <Quotation pullquote>{preface}</Quotation>
   </section>
 );
 

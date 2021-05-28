@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import Portal from '@atomikui-core/portal';
 import { useMediaQuery } from 'react-responsive';
-import { Header, Footer, ContactInfo, SocialMedia, Nav } from './components';
+import { Header, Footer, ContactInfo, SocialMedia } from './components';
 import { Hero, About, Principles, Career, OpenSource } from './sections';
 import { AppProvider, AppContext } from './context';
 
@@ -15,7 +15,6 @@ const App = () => {
       contact,
       principles,
       header,
-      nav,
       hero,
       footer,
       preface,
@@ -23,10 +22,6 @@ const App = () => {
       socialMedia,
     },
   } = useContext(AppContext);
-
-  const isDesktop = useMediaQuery({
-    query: '(min-width: 1024px)',
-  });
 
   const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
@@ -59,7 +54,7 @@ const App = () => {
       <div className="layout">
         <aside className="layout__header">
           <Header {...header} />
-          {isDesktop && (
+          {!isMobile && (
             <Footer copyrightText={footer.copyrightText}>
               <ContactInfo {...contact} />
               <SocialMedia {...socialMedia} />
