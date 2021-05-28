@@ -1,4 +1,5 @@
 .header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -33,7 +34,8 @@
     }
 
     & > * + * {
-      margin-left: rem(16);
+      margin-left: rem(12);
+      margin-top: 0;
     }
   }
 

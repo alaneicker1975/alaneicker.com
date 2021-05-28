@@ -4,17 +4,14 @@ import { useMediaQuery } from 'react-responsive';
 import Link from '@atomikui-core/link';
 import { BeardLogo, LogoText, Nav } from '..';
 
-const Header = ({ nav, logoText, mobileLogoText, strapline }) => {
+const Header = ({ nav, logoText, strapline }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
   return (
     <div className="header">
       <Link href="#top" className="header__logo">
         <BeardLogo />
-        <LogoText
-          strapline={isMobile ? '' : strapline}
-          title={isMobile ? mobileLogoText : logoText}
-        />
+        {!isMobile && <LogoText strapline={strapline} title={logoText} />}
       </Link>
       <Nav className="header__nav" navItems={nav} />
     </div>
@@ -22,7 +19,7 @@ const Header = ({ nav, logoText, mobileLogoText, strapline }) => {
 };
 
 Header.propTypes = {
-  navItems: PropTypes.arrayOf(
+  nav: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string,
       title: PropTypes.string,
@@ -30,10 +27,14 @@ Header.propTypes = {
       target: PropTypes.string,
     }),
   ),
+  logoText: PropTypes.string,
+  strapline: PropTypes.string,
 };
 
 Header.defaultProps = {
-  navItems: null,
+  nav: null,
+  logoText: '',
+  strapline: '',
 };
 
 export default Header;
